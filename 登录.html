@@ -1,0 +1,386 @@
+    <!doctype html>
+    <html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>登录</title>
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+         function changeLanguage(){
+
+            document.getElementById("JiZhuMiMa").innerHTML="Remember";
+            document.getElementById("WangJiMiMa").innerHTML="Forget";
+            document.getElementById("denglu").innerHTML="login";
+
+         }
+        </script>
+
+
+
+
+    <style>
+
+
+        /*修改提示文字的颜色*/
+
+    input::-webkit-input-placeholder { /* WebKit browsers */ 
+
+    color: #7f8ffb; 
+    font-weight: bold;
+
+
+    } 
+
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+
+    color: #7f8ffb; 
+
+    } 
+
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+
+    color: #7f8ffb; 
+
+    } 
+
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+
+    color: #7f8ffb; 
+
+    } 
+
+        html,body {
+            display: block;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar;
+            -webkit-tap-highlight-color: transparent;
+
+        }/*这里是关键*/
+        input[type="text"],#btn1,#btn2{
+            font-family: "楷体";
+            font-size: 20px;
+            color: #7f8ffb;
+            -web-kit-appearance:none;
+            -moz-appearance: none;
+            display: block;
+            outline: 0;
+            padding: 0;
+            text-decoration: none;
+            outline: none;
+            -webkit-appearance: none;
+            border-radius: 0;
+            border: none;
+            background: none;
+
+
+        }
+
+        .box{
+            width: 1920px;
+            height: 910px;
+            background-image: url("image/DengLu_drawable-xhdpi/background.png");
+
+
+        }
+        .Left{
+            float:left;
+            width:765px;
+            height:auto;
+            /*background:yellow;*/
+
+    } 
+        .Right{ 
+            float:right;
+            width:765px;
+            height:auto;
+            /*background:green;*/
+        }
+        .Center{
+            float: left; 
+            width: 390px;
+            height:auto; 
+            /*background:blue;*/
+         }
+        .Content{ 
+                min-width:700px;	_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>700?"700px":"");
+        }
+        img{
+            display: block;
+            padding-left: 120px;
+            margin-top: 45px;
+
+        }
+        .input{
+            margin-top: 248px;
+
+        }
+        .Title{
+                text-align: center;
+                margin-top: 0px;
+                font-family: "楷体";
+                font-size: 29px;
+                color: #FFFFFF;
+                font-weight: bold;
+
+
+         }
+        .input_numbre{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+                border: solid 1px #ffffff;
+                opacity: 0.7;
+                margin: auto;
+
+
+
+        }
+         .input_numbre2{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+                border: solid 1px #ffffff;
+                opacity: 0.7;
+                margin-top: 10px; 
+                margin-left: auto;
+                margin-right: auto;
+
+
+
+        }
+
+        .input_numbre3{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+                border: solid 1px #ffffff;
+                opacity: 0.7;
+                margin-top: 10px; 
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url("image/DengLu_drawable-xhdpi/圆角矩形透明60%.png")
+
+
+
+        }
+        .input_numbre:hover{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+
+
+                border: solid 1px #ffffff;
+                opacity: 1;
+                margin: auto;
+
+
+
+
+        }
+
+        .input_numbre2:hover{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+                border: solid 1px #ffffff;
+                opacity: 1;
+                margin-top: 10px; 
+                margin-left: auto;
+                margin-right: auto;
+
+
+
+
+        }
+
+         .input_numbre3:hover{
+                width: 320px;
+                height: 50px;
+                border-radius: 25px;
+                border: solid 1px #ffffff;
+                opacity: 1;
+                margin-top: 10px; 
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url("image/DengLu_drawable-xhdpi/圆角矩形透明100%.png")
+
+
+
+
+        }
+
+        .Prompt_text{
+            float: left;
+            margin-left: 16px;
+            font-family: "楷体";
+            color:  #7f8ffb;
+            font-size: 20px;
+            margin-top: 15px;
+            vertical-align: middle;
+            outline: 0;
+
+
+
+
+        }
+        .iocn{
+            float: left;
+            width: 20px;
+            height: 22px;
+            margin-left: 20px;
+            margin-top: 14px;
+            background: url("image/DengLu_drawable-xhdpi/numbre.png");
+
+        }
+        .iocn2{
+            float: left;
+            width: 20px;
+            height: 22px;
+            margin-left: 20px;
+            margin-top: 14px;
+            background: url("image/DengLu_drawable-xhdpi/密码.png");
+            background-repeat: no-repeat;
+
+        }
+        .iocn3{
+            float: left;
+            width: 20px;
+            height: 22px;
+            margin-left: 20px;
+            margin-top: 14px;
+            background: url("image/DengLu_drawable-xhdpi/验证码.png");
+            background-repeat: no-repeat;
+        }
+        .iocn4{
+
+            width: 20px;
+            height: 22px;
+            margin-left: 56px;
+            margin-top: 14px;
+            background: url("image/DengLu_drawable-xhdpi/记住密码.png");
+            background-repeat: no-repeat;
+        }
+        .Verification_code{
+            float: right;
+            background-image: url( "image/DengLu_drawable-xhdpi/D.png");
+            width: 70px;
+            height: 20px;
+            margin-top: -45px;
+            margin-right: 20px;
+        }
+
+        .changeEnglish{
+            border: none;
+            height: 34px;
+            width: 148px;
+            background: url("image/DengLu_drawable-xhdpi/-s-中英文切换.png")
+
+
+        }
+     /*一般可input:checked用于点击切换icon图标*/   
+    label{position:relative}
+    label input{width:100%;height:100%;position:absolute;top:0;left:0;opacity:0;}
+    label .icon{width:16px;height:16px;display:inline-block;vertical-align:middle;background-image:url("image/DengLu_drawable-xhdpi/记住密码(1).png");margin-left: -254px;margin-top: 14px;}
+    label input:checked+.icon{background-image:url("image/DengLu_drawable-xhdpi/记住密码.png");}
+
+
+    </style>
+    </head>
+
+    <body>
+        <div class="box">
+            <div class="Left">
+                <img src="image/DengLu_drawable-xhdpi/huirunneik_Logo.png">
+            </div>
+            <div class="Center">
+                <div class="input">
+                    <p class="Title"><b>宇宙最强科技局管理系统</b></p>
+                    <form action="" method="get">
+
+                        <div class="input_numbre">
+                        <div class="iocn"> 
+
+                        </div> 
+                        <p class="Prompt_text"><input type="text" name="login" style="outline: none" value="" placeholder="请输入账号"/></p>
+
+                        </div>
+
+                        <div class="input_numbre2">
+                        <div class="iocn2"> 
+
+                        </div> 
+                        <p class="Prompt_text"><input type="text" name="login" style="outline: none" value="" placeholder="请输入密码"/></p>  
+
+                        </div>
+
+                        <div class="input_numbre3">
+                        <div class="iocn3"> 
+
+                        </div>  
+                        <p id="YanZhenMa" class="Prompt_text"><input type="text" name="login" style="outline: none" value="" placeholder="请输入验证码"/></p>
+                        <div class="Verification_code"></div>
+                        </div>
+
+                        <div>
+                            <label>
+                            <input type="checkbox"/>
+                            <i class="icon"></i>
+                            <a id="JiZhuMiMa" class="Prompt_text" style="margin-left: 90px; margin-top: 4px;font-family: '楷体'; color: #7f8ffb;">记住密码</a>
+                            </label>
+
+                            <!--<div class="iocn4"></div>
+                            <div class="Prompt_text" style="margin-left: 90px; margin-top: -24px;font-family: '楷体'; color: #EAEAEA;">记住密码1</div>-->
+                            <a id="WangJiMiMa" href="https://www.baidu.com/" style="float: right;margin-top: 4px;color: #7f8ffb;text-decoration: none;margin-right: 50px;font-family: '楷体';">忘记密码</a>
+
+
+                      </div>
+                        <div class="input_numbre3" style="margin-top: 30px; cursor: pointer;">
+                        <a id="denglu" href=" " class="Prompt_text" style="color: white;margin-left: 137px;font-size: 20px;text-decoration: none;"><b>登录</b></a>
+
+                        </div>
+                    </form>
+
+
+                    <div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="Right"> 
+            <!--onClick="changeLanguage()"单击切换英文，我在style就定义了；cursor: pointer"鼠标手势-->
+             <img style="margin-left: 370px; cursor: pointer" onClick="changeLanguage()" src="image/DengLu_drawable-xhdpi/-s-中英文切换.png">  
+
+
+            <!--<input type="button" onclick="changeLanguage()" value="切换语言" />-->
+           <!-- <input type="image" class="changeEnglish"  style="margin-left: 490px; border: none;" onClick="changeLanguage()"    value=""/> -->
+           <!--<div id="div1">
+             <p id="p1">This is a pen</p>
+             <p id="p2">This is an apple</p>
+             <p id="p3">applepen pen</p>
+
+           </div>-->
+
+
+
+
+            </div>
+
+            <!--<img src="image/DengLu_drawable-xhdpi/background.png">-->
+        </div>
+    </body>
+
+    </html>
